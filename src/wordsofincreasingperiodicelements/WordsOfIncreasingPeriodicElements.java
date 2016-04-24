@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package wordsofincreasingperiodicelements;
 
 import java.io.File;
@@ -77,20 +72,22 @@ public class WordsOfIncreasingPeriodicElements {
                     // get the element
                     String thisElement = thisWord.substring(elementStart, elementEnd);
                     elementCount++;
-                        
                     //System.out.println(thisElement);
                     
+                    // check that this element is larger than prior one
                     if (elementList.get(thisElement) > lastElement) {
+                        // if so, this element is now the prior element
                         lastElement = elementList.get(thisElement);
                         elementStart = elementEnd;
                     } else {
+                        // otherwise, break out of this loop because the word doesn't fit our criteria
                         break;
                     }
                 }
                  
                 // if it got through whole word and it has at least 4 elements
                 if (elementStart == thisWord.length() && elementCount >= 4) {
-                    //... output to screen
+                    //... output the word
                     System.out.println(thisWord);
                 }
                 
