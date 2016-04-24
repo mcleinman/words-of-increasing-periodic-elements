@@ -41,7 +41,7 @@ public class WordsOfIncreasingPeriodicElements {
         
         // load file for words
         // list from: https://gist.githubusercontent.com/jeffThompson/7789182/raw/2a01261691b6790e5800fad41f13395ad0230a80/Words%2520In%2520The%2520Periodic%2520Table:%2520Results
-        // you may use an alternative list, but words must be capitalized as elements - so Helium/Nitrogen would be "HeN", not "HEN" or "Hen"
+        // you may use an alternative list, but words must be capitalized as elements - so Helium/Nitrogen would be "HeN", not "HEN" or "Hen".  The file must have one word per line.
         File wordFile = new File("WordFile.txt");
         String thisWord;
         try {
